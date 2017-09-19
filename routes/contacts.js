@@ -1,20 +1,17 @@
 var express = require('express');
 var router = express.Router();
+var Contact = require('../database/contact.model');
 
-var User = require('../database/user.model');
-
-/* GET users listing. */
+/* GET contacts */
 router.get('/', function (req, res, next) {
-  //res.json({users: [{name: 'Timmy'}]});
-
-  User.find((err, users) => {
+  Contact.find((err, users) => {
     if (err) res.send(err);
     res.json(users);
   })
 });
 
-router.get('/:user_id', function (req, res, next) {
-  User.findById(req.params.user_id, (err, user) => {
+router.get('/:contact_id', function (req, res, next) {
+  Contact.findById(req.params.contact_id, (err, user) => {
     if (err) res.send(err);
     res.json(user);
   })
