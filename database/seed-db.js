@@ -7,6 +7,8 @@ const MongoClient = require('mongodb').MongoClient;
 const users = require('./users');
 const contacts = require('./contacts');
 
+
+// Todo: seed with Mongoose instead of MongoClient
 function seedCollection(collectionName, initialRecords) {
 
   MongoClient.connect(DB_CONN, (err, db) => {
@@ -29,7 +31,6 @@ function seedCollection(collectionName, initialRecords) {
 
   });
 }
-
 
 seedCollection('users', users);
 seedCollection('contacts', contacts);
