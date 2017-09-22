@@ -1,0 +1,43 @@
+[
+  {
+    "name": "iPhone 7",
+    "price": 200,
+    "category": "Cell Phones",
+    "photoUrl": "data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs="
+  },
+  {
+    "name": "iPhone 6",
+    "price": 150,
+    "category": "Cell Phones",
+    "photoUrl": "data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs="
+  },
+  {
+    "name": "Sofa",
+    "price": 80,
+    "category": "Furniture",
+    "photoUrl": "data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs="
+  },
+  {
+    "name": "iPhone 7",
+    "price": 200,
+    "photoUrl": "data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs="
+  },
+  {
+    "name": "Audi 2009",
+    "price": 2000,
+    "category": "Cars",
+    "photoUrl": "data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs="
+  },
+  {
+    "name": "iHome Speaker",
+    "price": 50,
+    "category": "Electronics",
+    "photoUrl": "data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs="
+  },
+  {
+    "name": "Macbook Pro",
+    "price": 800,
+    "category": "Electronics",
+    "photoUrl": "data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs="
+  }
+]

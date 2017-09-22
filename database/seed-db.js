@@ -6,7 +6,7 @@ const MongoClient = require('mongodb').MongoClient;
 //const bcrypt = require('bcrypt');
 const users = require('./users');
 const contacts = require('./contacts');
-
+const products = require('./products');
 
 // Todo: seed with Mongoose instead of MongoClient
 function seedCollection(collectionName, initialRecords) {
@@ -23,7 +23,7 @@ function seedCollection(collectionName, initialRecords) {
 
     console.log('inserting records...');
     collection.insertMany(initialRecords, (err, result) => {
-      console.log(`${result.insertedCount} records inserted.`);
+      console.log(`${result.insertedCount} records inserted into ${collectionName}`);
       console.log('closing connection...');
       db.close();
       console.log('done.');
@@ -34,3 +34,4 @@ function seedCollection(collectionName, initialRecords) {
 
 seedCollection('users', users);
 seedCollection('contacts', contacts);
+seedCollection('products', products);
