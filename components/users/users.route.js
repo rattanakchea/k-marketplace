@@ -1,11 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-var User = require('../database/user.model');
+var User = require('./user.model');
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-  //res.json({users: [{name: 'Timmy'}]});
 
   User.find((err, users) => {
     if (err) res.send(err);

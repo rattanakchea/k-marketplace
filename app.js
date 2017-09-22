@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var usersRoute = require('./components/users/users.route');
 var contacts = require('./routes/contacts');
 var productsRoute = require('./components/products/products.route');
 
@@ -27,7 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/api/users', users);
+app.use('/api/users', usersRoute);
 app.use('/api/contacts', contacts);
 app.use('/api/products', productsRoute);
 
