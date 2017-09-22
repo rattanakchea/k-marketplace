@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service'
+import { IProduct } from '../interfaces/product';
 
 @Component({
   selector: 'k-home',
@@ -8,12 +9,15 @@ import { ApiService } from '../services/api.service'
 })
 export class HomeComponent implements OnInit {
 
+  products: IProduct[];  //array of products
+
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
 
     this.apiService.get('/products').subscribe( products => {
       console.log(products);
+      this.products = products;
     })
   }
 

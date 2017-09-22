@@ -18,8 +18,9 @@
     "photoUrl": "data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs="
   },
   {
-    "name": "iPhone 7",
-    "price": 200,
+    "name": "iPhone 8",
+    "price": 800,
+    "category": "Cell Phones",
     "photoUrl": "data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs="
   },
   {

@@ -26,7 +26,7 @@ export class ApiService {
     const request = new Request(requestOptions);
     return this.http.request(request)
       .map((res: Response) => {
-        console.warn(res);
+        console.log('result: ', res);
         return res.json();
       })
       .catch(this.handleError);
@@ -35,7 +35,7 @@ export class ApiService {
   get(url: string) {
     return this.request(url, RequestMethod.Get);
   }
-  
+
   // ======= Private Helper functions ======
   private handleError(err: any): Observable<string> {
     let errMessage: string;
