@@ -5,7 +5,6 @@ const DB_CONN = "mongodb://localhost:27017/test";
 const MongoClient = require('mongodb').MongoClient;
 //const bcrypt = require('bcrypt');
 const users = require('./users');
-const contacts = require('./contacts');
 const products = require('./products');
 
 // Todo: seed with Mongoose instead of MongoClient
@@ -33,5 +32,4 @@ function seedCollection(collectionName, initialRecords) {
 }
 
 seedCollection('users', users);
-seedCollection('contacts', contacts);
 seedCollection('products', products);
