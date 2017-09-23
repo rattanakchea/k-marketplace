@@ -1,75 +1,28 @@
-<nav class="navbar is-warning">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="http://bulma.io">
-      <h1>Khmer Marketplace</h1>
-    </a>
-    <div class="navbar-burger burger" data-target="navMenuColorwarning-example">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">Khmer Marketplace</a>
+  <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-  <div id="navMenuColorwarning-example" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item" href="http://bulma.io/">
-      Home
-    </a>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link" href="/documentation/overview/start/">
-        Docs
-      </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="/documentation/overview/start/">
-          Overview
-        </a>
-          <a class="navbar-item" href="http://bulma.io/documentation/modifiers/syntax/">
-          Modifiers
-        </a>
-          <a class="navbar-item" href="http://bulma.io/documentation/columns/basics/">
-          Columns
-        </a>
-          <a class="navbar-item" href="http://bulma.io/documentation/layout/container/">
-          Layout
-        </a>
-          <a class="navbar-item" href="http://bulma.io/documentation/form/general/">
-          Form
-        </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item" href="http://bulma.io/documentation/elements/box/">
-          Elements
-        </a>
-          <a class="navbar-item is-active" href="http://bulma.io/documentation/components/breadcrumb/">
-          Components
-        </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="field is-grouped">
-          <p class="control">
-            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://localhost:4000"
-              target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=http://localhost:4000&amp;via=jgthms">
-            <span class="icon">
-              <i class="fa fa-twitter"></i>
-            </span>
-            <span>
-              Tweet
-            </span>
-          </a>
-          </p>
-          <p class="control">
-            <a class="button is-primary" href="https://github.com/jgthms/bulma/archive/0.5.1.zip">
-            <span class="icon">
-              <i class="fa fa-download"></i>
-            </span>
-            <span>Download</span>
-          </a>
-          </p>
-        </div>
-      </div>
-    </div>
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Settings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Sign Up</a>
+      </li>
+    </ul>
+    <form class="form-inline mt-2 mt-md-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
   </div>
 </nav>
