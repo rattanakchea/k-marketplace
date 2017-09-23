@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api.service'
+
 
 @Component({
   selector: 'sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.sass']
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent {
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
-  ngOnInit() {
+  getProductsByCategory( category: string) {
+    this.apiService.get(`/products/category/${category}`)
   }
+  
 
 }

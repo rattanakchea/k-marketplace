@@ -17,4 +17,14 @@ router.get('/:product_id', function (req, res, next) {
   })
 });
 
+// get products by category
+router.get('/category/:product_cat', function (req, res, next) {
+  Product.find({
+    category: req.params.product_cat
+  }, (err, items) => {
+    if (err) res.send(err);
+    res.json(items);
+  })
+});
+
 module.exports = router;

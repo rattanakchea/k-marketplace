@@ -9,6 +9,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { HomeComponent } from './home/home.component';
 
 import { ApiService } from './services/api.service';
+import { StoreService } from './services/store.service';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import { ApiService } from './services/api.service';
     AppRoutingModule,
     HttpModule
   ],
-  providers: [ApiService],
+  providers: [ApiService, StoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
