@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 
 import { ApiService } from './services/api.service';
 import { StoreService } from './services/store.service';
+import { CategoryComponent } from './category/category.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { StoreService } from './services/store.service';
     AppComponent,
     TopnavComponent,
     SidebarComponent,
-    HomeComponent
+    HomeComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

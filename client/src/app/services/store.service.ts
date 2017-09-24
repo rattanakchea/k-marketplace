@@ -6,7 +6,15 @@ import { IProduct } from '../interfaces/product';
 @Injectable()
 export class StoreService {
 
-  products: IProduct[] = [];
+  _products: IProduct[] = [];
+
+  get products() {
+    return this._products;
+  }
+
+  set products(products: IProduct[]) {
+    this._products = products;
+  }
 
   constructor() {
   }
