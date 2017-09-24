@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../services/api.service'
 import { StoreService } from '../services/store.service';
-
-
+import { Categories } from '../data/data';
+import { Router } from '@angular/router';
 @Component({
   selector: 'sidebar',
   templateUrl: './sidebar.component.html',
@@ -10,14 +9,14 @@ import { StoreService } from '../services/store.service';
 })
 export class SidebarComponent {
 
-  constructor(private apiService: ApiService, private storeService: StoreService) { }
+  categories = Categories;
+
+  constructor(private router: Router, private storeService: StoreService) { }
 
   getProductsByCategory( category: string) {
-   
-    this.apiService.get(`/products/category/${category}`).subscribe( categoryItems => {
-      console.warn('sidebar', categoryItems);
-      this.storeService.products = categoryItems;
-    })
+
+    this.router.navigate([`/category/${category}`])
+  
   }
   
 
