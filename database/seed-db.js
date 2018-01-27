@@ -9,7 +9,6 @@ const products = require('./products');
 
 // Todo: seed with Mongoose instead of MongoClient
 function seedCollection(collectionName, initialRecords) {
-
   MongoClient.connect(DB_CONN, (err, db) => {
     console.log('connected to mongodb...');
     const collection = db.collection(collectionName);
