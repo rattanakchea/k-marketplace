@@ -1,10 +1,6 @@
 <div class="card-columns">
   <div class="card" *ngFor="let item of products">
-    <img class="card-img-top" src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" alt="Card image cap">
-    <div class="card-body">
-      <h4 class="card-title">{{item.name}}</h4>
-      <p class="card-text">{{item.price}} - {{item.category}}</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
+
+    <item [item]="item"></item>
   </div>
 </div>
