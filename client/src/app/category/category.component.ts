@@ -14,8 +14,6 @@ export class CategoryComponent implements OnInit {
 
   constructor(private aRoute: ActivatedRoute, private apiService: ApiService) { }
 
-  // Todo card-column display vertically, items display into its widget
-
   ngOnInit() {
 
     this.aRoute.params.subscribe(params => {

@@ -1,6 +1,5 @@
-<div class="card-columns">
-  <div class="card" *ngFor="let item of products">
-
-    <item [item]="item"></item>
+<div class="row">
+  <div class="col-md-4" *ngFor="let item of products">
+    <item [item]="item" class="card mb-4 box-shadow"></item>
   </div>
 </div>
