@@ -12,6 +12,7 @@ import { ApiService } from './services/api.service';
 import { StoreService } from './services/store.service';
 import { CategoryComponent } from './category/category.component';
 import { ItemComponent } from './item/item.component';
+import { ViewItemComponent } from './view-item/view-item.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ItemComponent } from './item/item.component';
     SidebarComponent,
     HomeComponent,
     CategoryComponent,
-    ItemComponent
+    ItemComponent,
+    ViewItemComponent
   ],
   imports: [
     BrowserModule,

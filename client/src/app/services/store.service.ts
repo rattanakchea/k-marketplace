@@ -7,7 +7,8 @@ import { IProduct } from '../interfaces/product';
 export class StoreService {
 
   _products: IProduct[] = [];
-
+  selectedItem: any;
+  
   get products() {
     return this._products;
   }
