@@ -19,4 +19,18 @@ router.get('/:user_id', function (req, res, next) {
   })
 });
 
+router.post('/signup', function (req, res, next) {
+  User.create({
+    username: "Rattanak",
+    password: "password2"
+  }, function(err, user) {
+    if (err) {
+      console.log("create error: ", err);
+      res.send(err);
+    }
+
+    res.json(user);
+  })
+});
+
 module.exports = router;
