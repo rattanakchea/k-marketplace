@@ -2,6 +2,10 @@ var express = require('express');
 var router = express.Router();
 var Product = require('./product.model');
 
+// import { addNewProduct } from './product.controller';
+var productCtrl = require('./product.controller');
+
+
 /* GET products */
 router.get('/', function (req, res, next) {
   Product.find((err, products) => {
@@ -9,6 +13,9 @@ router.get('/', function (req, res, next) {
     res.json(products);
   })
 });
+
+/* POST add product */
+router.post('/', productCtrl.addNewProduct);
 
 router.get('/:product_id', function (req, res, next) {
   Product.findById(req.params.product_id, (err, item) => {

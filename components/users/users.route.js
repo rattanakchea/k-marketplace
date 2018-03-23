@@ -20,17 +20,28 @@ router.get('/:user_id', function (req, res, next) {
 });
 
 router.post('/signup', function (req, res, next) {
-  User.create({
-    username: "Rattanak",
-    password: "password2"
-  }, function(err, user) {
-    if (err) {
-      console.log("create error: ", err);
-      res.send(err);
-    }
-
-    res.json(user);
-  })
+  // check for existing account
+  if (req.body && req.body.username) {
+    console.log('req username:', req.body.username);
+    User.findOne({ username: req.body.username }, function (err, user) {
+      console.log('User exists', user);
+      if (user) {
+        console.log('User already exists');
+        res.send('Account exist');
+      } else {
+        User.create({
+          username: req.body.username,
+          password: req.body.password
+        }, function (err, user) {
+          if (err) {
+            console.log("create error: ", err);
+            res.send(err);
+          }
+          res.json(user);
+        })
+      }
+    })
+  }
 });
 
 module.exports = router;
