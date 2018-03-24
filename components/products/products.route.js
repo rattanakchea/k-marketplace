@@ -5,33 +5,22 @@ var Product = require('./product.model');
 // import { addNewProduct } from './product.controller';
 var productCtrl = require('./product.controller');
 
-
 /* GET products */
-router.get('/', function (req, res, next) {
-  Product.find((err, products) => {
-    if (err) res.send(err);
-    res.json(products);
-  })
-});
+router.get('/', productCtrl.getProducts);
 
-/* POST add product */
+// GET Product by Id
+router.get('/:product_id', productCtrl.getProductById);
+
+// Delete product by Id
+router.delete('/:product_id', productCtrl.deleteProduct);
+
+// PUT update Product by Id
+router.put('/:product_id', productCtrl.updateProduct);
+
+/* POST add new product */
 router.post('/', productCtrl.addNewProduct);
 
-router.get('/:product_id', function (req, res, next) {
-  Product.findById(req.params.product_id, (err, item) => {
-    if (err) res.send(err);
-    res.json(item);
-  })
-});
-
 // get products by category
-router.get('/category/:product_cat', function (req, res, next) {
-  Product.find({
-    category: req.params.product_cat
-  }, (err, items) => {
-    if (err) res.send(err);
-    res.json(items);
-  })
-});
+router.get('/category/:product_cat', productCtrl.getProductByCategory);
 
 module.exports = router;
